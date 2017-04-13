@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{912989AC-FC5D-6DD8-242A-A3BEE6698816}") = "Captstone Game", "Assembly-CSharp-firstpass.csproj", "{C63D212F-36AA-7E11-E913-544D7092D788}"
+EndProject
+Project("{912989AC-FC5D-6DD8-242A-A3BEE6698816}") = "Captstone Game", "Assembly-CSharp.csproj", "{3854EB0B-D0CF-84E6-637C-51E09FD65EF9}"
+EndProject
+Project("{912989AC-FC5D-6DD8-242A-A3BEE6698816}") = "Captstone Game", "Assembly-CSharp-Editor.csproj", "{5C490275-77F3-182D-F7A4-436117D943C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C63D212F-36AA-7E11-E913-544D7092D788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63D212F-36AA-7E11-E913-544D7092D788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63D212F-36AA-7E11-E913-544D7092D788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63D212F-36AA-7E11-E913-544D7092D788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3854EB0B-D0CF-84E6-637C-51E09FD65EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3854EB0B-D0CF-84E6-637C-51E09FD65EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3854EB0B-D0CF-84E6-637C-51E09FD65EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3854EB0B-D0CF-84E6-637C-51E09FD65EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C490275-77F3-182D-F7A4-436117D943C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C490275-77F3-182D-F7A4-436117D943C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C490275-77F3-182D-F7A4-436117D943C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C490275-77F3-182D-F7A4-436117D943C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
