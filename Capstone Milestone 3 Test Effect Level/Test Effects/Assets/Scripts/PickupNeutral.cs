@@ -18,7 +18,7 @@ public class PickupNeutral : MonoBehaviour {
     private AudioSource eatSoundSource;
 
     public Renderer rend;
-    public Renderer blurRend;
+    //public Renderer blurRend;
 
     // Use this for initialization
     void Start()
