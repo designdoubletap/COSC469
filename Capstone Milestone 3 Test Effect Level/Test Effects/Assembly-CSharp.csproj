@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Detect.cs" />
+     <Compile Include="Assets\Scripts\PickupClear.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
      <Compile Include="Assets\Scripts\PickupSight.cs" />
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
