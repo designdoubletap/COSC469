@@ -1,45 +1,43 @@
-Initialize engine version: 5.5.2f1 (3829d7f588f3)
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
     Vendor:   NVIDIA
-    VRAM:     2018 MB
-    Driver:   10.18.15.4279
+    VRAM:     3072 MB
+    Driver:   22.21.13.8165
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Admin\Desktop\COSC469\Captstone Milestone 2\Milestone2_Data\Managed\System.dll (this message is harmless)
-desktop: 1360x768 59Hz; virtual: 1360x768 at 0,0
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.029 seconds
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\deswyn\Documents\Captsone\COSC469\Captstone Milestone 3 Rock Level\Milestone2_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 144Hz; virtual: 3840x1176 at -1920,-96
 <RI> Initializing input.
-XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.198697 ms
-NullReferenceException: Object reference not set to an instance of an object
-  at Detect.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+UnloadTime: 0.750372 ms
 NullReferenceException: Object reference not set to an instance of an object
   at Detect.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 35ec -> priority: 1 
-  Thread -> id: 2018 -> priority: 1 
+  Thread -> id: 8a0 -> priority: 1 
+  Thread -> id: 10bc -> priority: 1 
+Mushroom eaten
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
