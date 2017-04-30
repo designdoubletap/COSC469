@@ -103,6 +103,7 @@ public class PickupNeutral : MonoBehaviour {
                 rend.enabled = false;
                 //Destroy(this.gameObject);
                 Debug.Log("Mushroom eaten");
+                pickedUp = false;
                 Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
                 Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2.05f;
 

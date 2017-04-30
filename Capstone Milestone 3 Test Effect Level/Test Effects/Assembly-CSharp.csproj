@@ -78,10 +78,14 @@
      <Compile Include="Assets\Phonon\Simulator\SimulationSettingsPresetList.cs" />
      <Compile Include="Assets\Phonon\Simulator\SimulationSettingsValue.cs" />
      <Compile Include="Assets\Scripts\Detect.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\PickupClear.cs" />
+     <Compile Include="Assets\Scripts\PickupHealth.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
      <Compile Include="Assets\Scripts\PickupSight.cs" />
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
+     <Compile Include="Assets\Scripts\ScreenFade.cs" />
+     <Compile Include="Assets\Scripts\TriggerDamage.cs" />
      <Compile Include="Assets\Soundscape\Demo\CameraMove.cs" />
      <Compile Include="Assets\Soundscape\SoundscapeAudioSource.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -165,6 +169,9 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -179,6 +186,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

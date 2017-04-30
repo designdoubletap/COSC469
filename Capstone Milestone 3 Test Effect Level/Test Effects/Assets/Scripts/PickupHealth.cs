@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupSight : MonoBehaviour {
+public class PickupHealth : MonoBehaviour {
 
-    public Transform player;
+	public Transform player;
     public Transform pCam;
 
     public float force = 10;
+
+    
 
     bool inRange = false;
     bool pickedUp = false;
@@ -18,6 +20,7 @@ public class PickupSight : MonoBehaviour {
     private AudioSource eatSoundSource;
 
     public Renderer rend;
+    //public Renderer blurRend;
 
     // Use this for initialization
     void Start()
@@ -32,6 +35,8 @@ public class PickupSight : MonoBehaviour {
         //render gameobject
         rend = GetComponent<Renderer>();
         rend.enabled = true;
+
+        //blurRend = GetComponent<Camera.main.Unit>
 
         GetComponent<Rigidbody>().useGravity = false;
 
@@ -99,16 +104,9 @@ public class PickupSight : MonoBehaviour {
                 eatSound();
                 rend.enabled = false;
                 //Destroy(this.gameObject);
-                Debug.Log("Mushroom eaten");
                 pickedUp = false;
-
-                //screen effects
-
-                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 2;
-                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2.56f;
-                Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
-
-
+                
+                
 
             }
         }
@@ -136,15 +134,13 @@ public class PickupSight : MonoBehaviour {
         soundSource.Play();
     }
 
-    void OnTriggerEnter()
+ 
+
+    void OnTriggerEnter(Collider other)
     {
         if (pickedUp == true)
         {
             wallTouch = true;
-
-
-
         }
     }
 }
-
