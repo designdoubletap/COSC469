@@ -61,6 +61,19 @@
      <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+     <Compile Include="Assets\Phonon\Build\Editor\PhononBuild.cs" />
+     <Compile Include="Assets\Phonon\Core\Editor\PhononGUI.cs" />
+     <Compile Include="Assets\Phonon\Core\Editor\PhononWindow.cs" />
+     <Compile Include="Assets\Phonon\Export\Editor\PhononGeometryInspector.cs" />
+     <Compile Include="Assets\Phonon\Export\Editor\PhononMaterialDrawer.cs" />
+     <Compile Include="Assets\Phonon\Export\Editor\PhononMaterialInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\BakedStaticListenerNodeInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\CustomPhononSettingsInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\PhononListenerInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\PhononManagerInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\PhononSourceInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\ProbeBoxInspector.cs" />
+     <Compile Include="Assets\Phonon\Simulator\Editor\SimulationSettingsValueDrawer.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -142,9 +155,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -186,9 +196,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
