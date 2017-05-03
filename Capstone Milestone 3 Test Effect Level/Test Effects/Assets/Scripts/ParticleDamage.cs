@@ -6,7 +6,7 @@ public class ParticleDamage : MonoBehaviour {
 
     bool promptKey = false;
 
-    public bool isDamaging;
+    public bool isDamaging = true;
     public float damageAmount = 10;
 
     // Use this for initialization
@@ -38,7 +38,7 @@ public class ParticleDamage : MonoBehaviour {
     private ParticleSystem _CachedSparks;
     public bool includeChildren = true;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
 
         if (promptKey == true)
@@ -49,11 +49,8 @@ public class ParticleDamage : MonoBehaviour {
 
         }
 
-        //other.SendMessage((isDamaging) ? "TakeDamage" : "HealDamage", Time.deltaTime * damageAmount);
+        other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
     }
 
-    void OnTriggerStay(Collider other)
-    {
-        other.SendMessage((isDamaging) ? "TakeDamage" : "HealDamage", Time.deltaTime * damageAmount);
-    }
+   
 }

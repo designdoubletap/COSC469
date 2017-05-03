@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TriggerDamage : MonoBehaviour {
 
-    public bool isDamaging;
-    public float damageAmount = 10;
+    public bool isDamaging = true;
+    public float damageAmount;
 
     void OnTriggerStay(Collider other)
     {
@@ -13,7 +13,12 @@ public class TriggerDamage : MonoBehaviour {
         {
             //player takes damage as long as they remain in damage zone
 
-            other.SendMessage((isDamaging) ? "TakeDamage" : "HealDamage", Time.deltaTime * damageAmount);
+            damageAmount = GetComponentInChildren<ParticleDamage>().damageAmount;
+            
+
+            other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
+
+            
         }
     }
 
