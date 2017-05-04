@@ -22,7 +22,8 @@ public class HealthBar : MonoBehaviour {
 
         curHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
 
-        //Debug.Log(damagePoint);
+        Debug.Log((Mathf.Round(damagePoint * 100f / 100f)));
+        
     }
 
     private void TakeDamage(float damage)

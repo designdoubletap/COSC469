@@ -98,11 +98,11 @@ public class PickupNeutral : MonoBehaviour {
                 pickedUp = false;
                 dropSound();
             }
+            //eat
             else if (Input.GetKeyDown(KeyCode.F))
             {
                 eatSound();
                 rend.enabled = false;
-                //Destroy(this.gameObject);
                 Debug.Log("Mushroom eaten");
 
                 playerMass = 100;

@@ -83,12 +83,14 @@
      <Compile Include="Assets\Phonon\Simulator\SimulationSettingsPresetList.cs" />
      <Compile Include="Assets\Phonon\Simulator\SimulationSettingsValue.cs" />
      <Compile Include="Assets\Scripts\Detect.cs" />
+     <Compile Include="Assets\Scripts\Fading.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\ParticleDamage.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
      <Compile Include="Assets\Scripts\PickupObjects.cs" />
      <Compile Include="Assets\Scripts\PickupSight.cs" />
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
+     <Compile Include="Assets\Scripts\SoundscapeAudioSource.cs" />
      <Compile Include="Assets\Scripts\TriggerDamage.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

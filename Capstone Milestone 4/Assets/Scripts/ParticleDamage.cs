@@ -56,7 +56,6 @@ public class ParticleDamage : MonoBehaviour {
 
         }
 
-        //other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
     }
 
    

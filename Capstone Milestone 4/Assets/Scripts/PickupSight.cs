@@ -36,7 +36,7 @@ public class PickupSight : MonoBehaviour {
 
         GetComponent<Rigidbody>().useGravity = true;
 
-        //StartCoroutine(waitToDestroy());
+        
     }
 
     // Update is called once per frame
@@ -118,7 +118,7 @@ public class PickupSight : MonoBehaviour {
 
                 
                 
-                //soundSource.Stop();
+                
                 pickedUp = false;
 
             }
