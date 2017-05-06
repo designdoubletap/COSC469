@@ -1,13 +1,13 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{E14330CE-4651-A3F9-DFF1-B4B5113C63E5}") = "Capstone Milestone 4", "Assembly-CSharp-firstpass.csproj", "{247790A9-4EEA-003B-361E-EDDE21B94BFD}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone Milestone 4", "Assembly-CSharp-firstpass.csproj", "{247790A9-4EEA-003B-361E-EDDE21B94BFD}"
 EndProject
-Project("{E14330CE-4651-A3F9-DFF1-B4B5113C63E5}") = "Capstone Milestone 4", "Assembly-CSharp.csproj", "{FA74006D-3511-874B-CC0D-0ED30AAE6087}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone Milestone 4", "Assembly-CSharp.csproj", "{FA74006D-3511-874B-CC0D-0ED30AAE6087}"
 EndProject
-Project("{E14330CE-4651-A3F9-DFF1-B4B5113C63E5}") = "Capstone Milestone 4", "Assembly-CSharp-Editor-firstpass.csproj", "{BADBEDCD-C65F-5AC5-F70F-D0AC2890AB2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone Milestone 4", "Assembly-CSharp-Editor-firstpass.csproj", "{BADBEDCD-C65F-5AC5-F70F-D0AC2890AB2A}"
 EndProject
-Project("{E14330CE-4651-A3F9-DFF1-B4B5113C63E5}") = "Capstone Milestone 4", "Assembly-CSharp-Editor.csproj", "{6695459D-EB70-7D96-9FBD-DE3CE9DCC2A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone Milestone 4", "Assembly-CSharp-Editor.csproj", "{6695459D-EB70-7D96-9FBD-DE3CE9DCC2A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
