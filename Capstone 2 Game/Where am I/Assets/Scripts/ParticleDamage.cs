@@ -10,7 +10,7 @@ public class ParticleDamage : MonoBehaviour {
     public float damageAmount = 10;
     public bool interactable;
 
-    public GameObject smoke;
+
 
     
 
@@ -62,7 +62,7 @@ public class ParticleDamage : MonoBehaviour {
         {
             sparks.Stop(includeChildren);
             damageAmount = 0;
-            smoke.SetActive(false);
+           
             audio.Stop();
         }
 

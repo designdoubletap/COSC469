@@ -50,6 +50,7 @@ public class PickupObjects : MonoBehaviour {
         {
 
             GetComponent<Rigidbody>().useGravity = true;
+            
 
             //drop object if player touches wall
             if (wallTouch == true)
