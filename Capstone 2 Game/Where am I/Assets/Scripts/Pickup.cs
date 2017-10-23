@@ -126,9 +126,9 @@ public class Pickup : MonoBehaviour
 
                     if (sightMushroom == true)
                     {
-                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 2;
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 0f;
-                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 1;
                         audioManager.GetComponent<AudioManager>().LowerVolume();
                     }
 
@@ -142,7 +142,7 @@ public class Pickup : MonoBehaviour
 
                     if (neutralMushroom == true)
                     {
-                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 2;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2f;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
                         audioManager.GetComponent<AudioManager>().ResetVolume();

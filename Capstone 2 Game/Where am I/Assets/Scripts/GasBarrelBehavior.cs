@@ -10,7 +10,7 @@ public class GasBarrelBehavior : MonoBehaviour {
     public GameObject leak;
     
 
-    float force = 5f;
+    float force = 2f;
 
     public float objMass;
 
@@ -22,7 +22,7 @@ public class GasBarrelBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-		
+        this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 	}
 	
 	// Update is called once per frame
@@ -51,8 +51,8 @@ public class GasBarrelBehavior : MonoBehaviour {
 
         if (pickedUp == true)
         {
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
-            
 
             //drop object if player touches wall
             if (wallTouch == true)
@@ -89,19 +89,6 @@ public class GasBarrelBehavior : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter(Collider other)
-    {
-        if(other.tag == "Fire")
-        {
-            StartCoroutine(Explode());
-        }
-    }
-
-    IEnumerator Explode()
-    {
-        yield return new WaitForSeconds(3);
-        GetComponent<Explosion>().BigExplosion();
-        
-    }
+    
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class RaycastForward : MonoBehaviour {
 
@@ -31,9 +32,8 @@ public class RaycastForward : MonoBehaviour {
 	void Start () 
 	{
 
+       //StartCoroutine(DialogQ());
         
-        
-        StartCoroutine(DialogQ());
 	}
 	
 	// Update is called once per frame
@@ -49,6 +49,7 @@ public class RaycastForward : MonoBehaviour {
 		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;	
 		Debug.DrawRay(transform.position,forward,Color.blue);
 
+        //Dialogue();
         
 		if(Physics.Raycast(transform.position, (forward),out hit))
 		{
@@ -56,6 +57,12 @@ public class RaycastForward : MonoBehaviour {
             string msg = hit.collider.gameObject.tag;
             if (distance <= 5 )
             {
+                /*
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    tmpHud.SetText(msg);
+                }*/
+                
                 //check layer
                 if(hit.collider.gameObject.layer == 8)
                 {
@@ -63,50 +70,24 @@ public class RaycastForward : MonoBehaviour {
                     
                     objMass = hit.collider.gameObject.GetComponent<Rigidbody>().mass;
 
-                    
-
                     if(playerMass < objMass)
                     {
                         msg = msg + "\nHeavy!";
                         StartCoroutine(ShowHUD(msg));
+                        //tmpHud.text = msg;
+                        
                     }
                     else if(playerMass >= objMass)
                     {
                         StartCoroutine(ShowHUD(msg));
-                    }
-                    
-                    //tutorial
-                    if (firstHit == true && msg.Equals("Mushroom"))
-                    {
-                        firstHit = false;
-                        StartCoroutine(MHUD());
-                        StopCoroutine(MHUD());
-                        
-
-                        //StartCoroutine(Wait());
-                    }
-                    
-                    else
-                    if(msg.Equals("Mushroom"))
-                    {
-                        StartCoroutine(Wait());
-
-                        //StartCoroutine(TutorialHUD());
-                        StartCoroutine(ShowHUD(msg));
-                        
-                    }
-                    
+                        //tmpHud.text = msg;
+                    }                   
                 }
-
-                if(hit.collider.gameObject.layer == 9)
-                {
-                    StartCoroutine(FireDialog(smoke, fire, msg));
-                    //wStopCoroutine(FireDialog(smoke, fire));
-                }
-               
+                
             }        
 			
 		}
+        else { tmpHud.text = ""; }
 
 	}
 
@@ -117,26 +98,18 @@ public class RaycastForward : MonoBehaviour {
         tmpHud.text = message;
         yield return new WaitForSecondsRealtime(.5f);
         tmpHud.text = "";
+        
 
     }
 
-    IEnumerator Wait()
+    public void  MushroomTut()
     {
-        yield return new WaitForSecondsRealtime(60);
-    }
-
-    IEnumerator MHUD()
-    {
-        yield return new WaitForSecondsRealtime(1);
+        StartCoroutine(Pause(30));
         voiceHud.text = "Is that a mushroom? It looks kinda interesting..";
-        /*
-        yield return new WaitForSeconds(45);
-        voiceHud.text = "";
-        voiceHud.text = "Pick it up.\nTip: Press E";
-
-        yield return new WaitForSeconds(50);
-        voiceHud.text = "Eat it, what's the worst that could happen?";
-        */
+        StartCoroutine(Pause(3));
+        voiceHud.SetText("It smells pretty good...");
+        StartCoroutine(Pause(2));
+        voiceHud.SetText("Hey, maybe you should eat it. What's the worst that could happen? Plus maybe you'll gain superpowers like being able to shoot fireballs.");
 
     }
 
@@ -146,66 +119,37 @@ public class RaycastForward : MonoBehaviour {
         voiceHud.SetText("Pick it up. Press E");
     }
 
-    IEnumerator FireDialog(GameObject smke, float fireD, string msg)
-    {
-        yield return new WaitForSecondsRealtime(10);
-        voiceHud.enabled = true;
-        voiceHud.SetText("Is that fire? ");
-
-        yield return new WaitForSecondsRealtime(3);
-        smke.SetActive(true);
-        //GetComponent<ParticleDamage>().damageAmount = ((fireD + .05f) * Time.deltaTime);
-        //voiceHud.enabled = false;
-
-        yield return new WaitForSecondsRealtime(5);
-        //voiceHud.enabled = true;
-        voiceHud.SetText("I think the fire is hurting us. See the white bar is moving.");
-
-        yield return new WaitForSecondsRealtime(5);
-        voiceHud.SetText("Maybe we should move back");
-
-        yield return new WaitForSecondsRealtime(3);
-        voiceHud.SetText("Maybe there's something here that can help");
-
-        yield return new WaitForSecondsRealtime(30);
-        voiceHud.SetText("Maybe those heavy boxes could help.");
-
-        yield return new WaitForSecondsRealtime(35);
-        voiceHud.SetText("That mushroom smells pretty good..");
-
-        yield return new WaitForSecondsRealtime(50);
-        if (msg.Equals("Mushroom"))
-        {
-            voiceHud.SetText("Pick it up (Press E) and eat it (Press F)");
-        }
-
-    }
+ 
 
     IEnumerator DialogQ()
     {
         yield return new WaitForSecondsRealtime(3);
         voiceHud.SetText("Something is not right here...");
+        Pause(3);
+       
     }
 
-    /*
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Mushroom")
-        {
-            StartCoroutine(MushroomTutorial());
-            Debug.Log("touch mushroom");
-        }
-    }
+ 
 
-    IEnumerator MushroomTutorial()
-    {
-        yield return new WaitForSeconds(5);
-        voiceHud.text = "Pick it up. Press E";
-
-        yield return new WaitForSeconds(50);
-        voiceHud.text = "Eat it, what's the worst that could happen?";
-
-    }
-    */
     
+
+    public void Dialogue()
+    {
+        voiceHud.SetText("Is that fire? Move forwad I want to get a better look.");
+        StartCoroutine(Pause(3));
+        voiceHud.SetText("Man, the heat is intense. Don't go any closer or you'll get burnt. See that white bar down there? That's your health");
+        StartCoroutine(Pause(5));
+        voiceHud.SetText("Maybe there's something here that can help");
+        StartCoroutine(Pause(5));
+        voiceHud.SetText("");
+        Pause(10);
+        voiceHud.SetText("All I see are a bunch of old boxes, a leaky vent and a mushroom.");
+        Pause(5);
+        voiceHud.SetText("Hey! Maybe we could add those things together. I remember those old games where mushrooms gave players powers and made them grow really strong and stuff. ");
+    }
+
+    IEnumerator Pause(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+    }
 }

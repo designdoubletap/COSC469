@@ -122,11 +122,13 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BlinkUI.cs" />
      <Compile Include="Assets\Scripts\Detect.cs" />
      <Compile Include="Assets\Scripts\HandleTextFile.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\ParticleDamage.cs" />
+     <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PickupClear.cs" />
      <Compile Include="Assets\Scripts\PickupHealth.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
