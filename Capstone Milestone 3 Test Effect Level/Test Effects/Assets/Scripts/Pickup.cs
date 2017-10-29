@@ -34,7 +34,7 @@ public class Pickup : MonoBehaviour
     public Renderer rend;
 
     bool inRange = false;
-    bool pickedUp = false;
+    public bool pickedUp = false;
     bool wallTouch = false;
 
 

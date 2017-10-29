@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 156
+  controlID: 150
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 157
+  controlID: 151
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 406
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -399,11 +399,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.03379304, y: -0.9627798, z: 0.22333498, w: -0.14844033}
     speed: 2
-    m_Value: {x: -0.03379304, y: -0.9627798, z: 0.22333498, w: -0.14844033}
+    m_Value: {x: 0.03379304, y: 0.9627798, z: -0.22333498, w: 0.14844032}
   m_Size:
-    m_Target: 103.34007
+    m_Target: 150.7969
     speed: 2
-    m_Value: 103.34007
+    m_Value: 150.7969
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -468,9 +468,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 8c2a0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 2ae0f3ff1ae1f3ff4ce3f3ff3697f5ff7aa6f5ff12fbffffa8fbffffe2fbffff00000000a6320000543300006c330000
+    m_ExpandedIDs: 78f7ffffe2fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,20 +530,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/EffectExamples/FireExplosionEffects/Prefabs
+    - Assets/Sounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/EffectExamples/FireExplosionEffects/Prefabs
+  - Assets/Sounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\deswyn\Documents\Captsone\COSC469\Capstone 2 Game\Where
     am I
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 882c0000
-    m_LastClickedID: 11400
-    m_ExpandedIDs: 000000009e2800001e290000602900000e2a0000442a0000402b0000c82c0000182d0000222d00003a2e00003a2f00005c30000000ca9a3bffffff7f
+    m_SelectedIDs: f62c0000
+    m_LastClickedID: 11510
+    m_ExpandedIDs: 000000009e2800002029000062290000102a0000462a0000442b0000cc2c00001c2d0000262d00003e2e00003e2f00006030000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -571,7 +571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e2800001a2900001e29000060290000442a0000402b0000c82c0000182d0000222d00003a2e00003a2f00005c3000009a300000
+    m_ExpandedIDs: 000000009e2800002029000062290000102a0000462a0000442b0000cc2c00001c2d0000262d00003e2e00003e2f000060300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

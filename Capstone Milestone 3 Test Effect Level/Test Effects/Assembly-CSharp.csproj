@@ -46,6 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
      <Compile Include="Assets\Phonon\Core\AudioEngine.cs" />
      <Compile Include="Assets\Phonon\Core\PhononCommon.cs" />
      <Compile Include="Assets\Phonon\Core\PhononCore.cs" />
@@ -124,7 +129,11 @@
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BlinkUI.cs" />
+     <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Detect.cs" />
+     <Compile Include="Assets\Scripts\FlameThrowerShake.cs" />
+     <Compile Include="Assets\Scripts\FlamethrowerBehavior.cs" />
+     <Compile Include="Assets\Scripts\FlamethrowerToggle.cs" />
      <Compile Include="Assets\Scripts\HandleTextFile.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\ParticleDamage.cs" />
@@ -136,6 +145,7 @@
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
      <Compile Include="Assets\Scripts\RaycastForward.cs" />
      <Compile Include="Assets\Scripts\ScreenFade.cs" />
+     <Compile Include="Assets\Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\Scripts\TriggerDamage.cs" />
      <Compile Include="Assets\Scripts\TriggerDamageRoom.cs" />
      <Compile Include="Assets\Scripts\WriteText.cs" />
@@ -186,6 +196,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />

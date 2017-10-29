@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour {
         Debug.Log(damagePoint);
     }
 
-    private void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         damagePoint -= damage;
         if(damagePoint < 0)
@@ -36,7 +36,7 @@ public class HealthBar : MonoBehaviour {
         UpdateHealthBar();
     }
 
-    private void HealDamage(float heal)
+    public void HealDamage(float heal)
     {
         damagePoint += heal;
         if (damagePoint > maxDamagePoint)
