@@ -34,7 +34,8 @@ public class Pickup : MonoBehaviour
     public Renderer rend;
 
     bool inRange = false;
-    bool pickedUp = false;
+    public bool pickedUp = false;
+    public bool eaten = false;
     bool wallTouch = false;
 
 
@@ -108,6 +109,7 @@ public class Pickup : MonoBehaviour
             else if (Input.GetMouseButton(1))
             {
                 GetComponent<Rigidbody>().isKinematic = false;
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
                 transform.parent = null;
                 pickedUp = false;
                 dropSound();
@@ -120,6 +122,8 @@ public class Pickup : MonoBehaviour
                 {
                     
                     rend.enabled = false;
+                    this.gameObject.SetActive(false);
+                    eaten = true;
                     player.GetComponent<Rigidbody>().mass = 175;
 
                     
@@ -130,6 +134,7 @@ public class Pickup : MonoBehaviour
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 0f;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 1;
                         audioManager.GetComponent<AudioManager>().LowerVolume();
+                        eatSound();
                     }
 
                     if (soundMushroom == true)
@@ -138,6 +143,7 @@ public class Pickup : MonoBehaviour
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 4f;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 3;
                         audioManager.GetComponent<AudioManager>().RaiseVolume();
+                        eatSound();
                     }
 
                     if (neutralMushroom == true)
@@ -146,9 +152,10 @@ public class Pickup : MonoBehaviour
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2f;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
                         audioManager.GetComponent<AudioManager>().ResetVolume();
+                        eatSound();
                     }
-                    eatSound();
-                    Destroy(this.gameObject);
+                    //eatSound();
+                    //Destroy(this.gameObject);
                 }
 
                 
@@ -164,8 +171,17 @@ public class Pickup : MonoBehaviour
             return;
         }
 
+        
+            //GameObject pMush = pCam.GetComponentInChildren<GameObject>().ta;
+            //Destroy();
+
         soundSource.clip = soundFx[1];
         soundSource.Play();
+
+        if (!soundSource.isPlaying)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     IEnumerator dropSound()

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2378a408cc10c7a4a832c7d190668ae0
+timeCreated: 1509639124
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DK Flagellum Dei
+  fontNames:
+  - DK Flagellum Dei
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a08d6088373b09f4889102d765952501, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

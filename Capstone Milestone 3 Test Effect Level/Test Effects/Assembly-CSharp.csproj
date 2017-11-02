@@ -131,6 +131,7 @@
      <Compile Include="Assets\Scripts\BlinkUI.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Detect.cs" />
+     <Compile Include="Assets\Scripts\FireBehvior.cs" />
      <Compile Include="Assets\Scripts\FlameThrowerShake.cs" />
      <Compile Include="Assets\Scripts\FlamethrowerBehavior.cs" />
      <Compile Include="Assets\Scripts\FlamethrowerToggle.cs" />
@@ -145,9 +146,11 @@
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
      <Compile Include="Assets\Scripts\RaycastForward.cs" />
      <Compile Include="Assets\Scripts\ScreenFade.cs" />
+     <Compile Include="Assets\Scripts\ShowVideo.cs" />
      <Compile Include="Assets\Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\Scripts\TriggerDamage.cs" />
      <Compile Include="Assets\Scripts\TriggerDamageRoom.cs" />
+     <Compile Include="Assets\Scripts\WaterBehavior.cs" />
      <Compile Include="Assets\Scripts\WriteText.cs" />
      <Compile Include="Assets\Soundscape\Demo\CameraMove.cs" />
      <Compile Include="Assets\Soundscape\SoundscapeAudioSource.cs" />
@@ -349,7 +352,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b12">
- <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
+ <HintPath>F:/Capstone/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
