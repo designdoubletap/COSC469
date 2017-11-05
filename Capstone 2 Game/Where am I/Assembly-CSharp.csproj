@@ -139,6 +139,7 @@
      <Compile Include="Assets\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\GasBarrelBehavior.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\LoadingScreenButtonManager.cs" />
      <Compile Include="Assets\Scripts\ParticleDamage.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
