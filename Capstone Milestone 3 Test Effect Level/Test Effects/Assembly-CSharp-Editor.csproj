@@ -310,10 +310,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b12">
- <HintPath>F:/Capstone/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
+ <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b12-Editor">
- <HintPath>F:/Capstone/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b12-Editor.dll</HintPath>
+ <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone Milestone 3 Test Effect Level/Test Effects/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b12-Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

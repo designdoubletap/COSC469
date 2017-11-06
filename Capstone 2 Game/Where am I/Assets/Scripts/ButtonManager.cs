@@ -13,6 +13,8 @@ public class ButtonManager : MonoBehaviour {
     public Dropdown vSyncD;
     public Button applyButton;
 
+    
+
     public Resolution[] resolutions;
     public GameSettings gameSettings;
 

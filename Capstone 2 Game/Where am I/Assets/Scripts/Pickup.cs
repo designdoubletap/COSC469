@@ -70,7 +70,7 @@ public class Pickup : MonoBehaviour
         else { inRange = false; }
 
         //player in range and is pressing interact button
-        if (inRange == true && Input.GetButtonDown("Interact"))
+        if (inRange == true && Input.GetButtonDown("Interact") && playerMass>=objMass)
         {
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = pCam;

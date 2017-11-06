@@ -140,6 +140,8 @@
      <Compile Include="Assets\Scripts\GasBarrelBehavior.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\LoadingScreenButtonManager.cs" />
+     <Compile Include="Assets\Scripts\NextLevel.cs" />
+     <Compile Include="Assets\Scripts\Overlay.cs" />
      <Compile Include="Assets\Scripts\ParticleDamage.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PickupNeutral.cs" />
@@ -147,6 +149,7 @@
      <Compile Include="Assets\Scripts\PickupSight.cs" />
      <Compile Include="Assets\Scripts\PickupStrange.cs" />
      <Compile Include="Assets\Scripts\RaycastForward.cs" />
+     <Compile Include="Assets\Scripts\ShowVideo.cs" />
      <Compile Include="Assets\Scripts\SoundscapeAudioSource.cs" />
      <Compile Include="Assets\Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\Scripts\TriggerDamage.cs" />

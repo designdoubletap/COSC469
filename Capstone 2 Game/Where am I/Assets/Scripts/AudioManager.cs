@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour {
     //player sounds
     public AudioSource[] playerSounds;
 
+    public AudioSource ringing;
+
 
 
 
@@ -33,7 +35,11 @@ public class AudioManager : MonoBehaviour {
         for (int i = 0; i < environtmentSounds.Length; i++)
         {
             environtmentSounds[i].GetComponent<AudioSource>().volume = .3f;
+
         }
+
+        ringing.GetComponent<AudioSource>().Play();
+        ringing.GetComponent<AudioSource>().volume = .03f;
     }
 
     public void RaiseVolume()
@@ -42,6 +48,8 @@ public class AudioManager : MonoBehaviour {
         {
             environtmentSounds[i].GetComponent<AudioSource>().volume = 1f;
         }
+
+        ringing.GetComponent<AudioSource>().Stop();
     }
 
     public void ResetVolume()
@@ -50,5 +58,27 @@ public class AudioManager : MonoBehaviour {
         {
             environtmentSounds[i].GetComponent<AudioSource>().volume = .7f;
         }
+
+        ringing.GetComponent<AudioSource>().Stop();
+    }
+
+    public void PauseAll()
+    {
+        for (int i = 0; i < environtmentSounds.Length; i++)
+        {
+            environtmentSounds[i].GetComponent<AudioSource>().Pause();
+        }
+
+        ringing.GetComponent<AudioSource>().Pause();
+    }
+
+    public void ResumeAll()
+    {
+        for (int i = 0; i < environtmentSounds.Length; i++)
+        {
+            environtmentSounds[i].GetComponent<AudioSource>().UnPause();
+        }
+
+        ringing.GetComponent<AudioSource>().UnPause();
     }
 }

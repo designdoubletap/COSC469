@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour {
 
     public Image curHealthBar;
+    public GameObject overlayMngr;
 
-    private float damagePoint = 100;
+    public float damagePoint = 100;
     private float maxDamagePoint = 100;
 
     private void Start()
@@ -32,7 +33,11 @@ public class HealthBar : MonoBehaviour {
         if(damagePoint < 0)
         {
             damagePoint = 0;
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            overlayMngr.GetComponent<Overlay>().Death();
+            
         }
         UpdateHealthBar();
     }

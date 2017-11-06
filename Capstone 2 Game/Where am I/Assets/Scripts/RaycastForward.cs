@@ -37,7 +37,7 @@ public class RaycastForward : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
         //get player current mass
         playerMass = player.GetComponent<Rigidbody>().mass;
@@ -55,35 +55,29 @@ public class RaycastForward : MonoBehaviour {
 		{
 			distance = hit.distance;
             string msg = hit.collider.gameObject.tag;
-            if (distance <= 5 )
+            if (distance <= 7 )
             {
-                /*
-                if (EventSystem.current.IsPointerOverGameObject())
-                {
-                    tmpHud.SetText(msg);
-                }*/
                 
-                //check layer
-                if(hit.collider.gameObject.layer == 8)
+
+                if (hit.collider.gameObject.layer == 8)
                 {
-                    //display tag to player
-                    
                     objMass = hit.collider.gameObject.GetComponent<Rigidbody>().mass;
 
                     if(playerMass < objMass)
                     {
                         msg = msg + "\nHeavy!";
-                        StartCoroutine(ShowHUD(msg));
-                        //tmpHud.text = msg;
-                        
+                        tmpHud.text = msg;
                     }
-                    else if(playerMass >= objMass)
+                    if(playerMass >= objMass)
                     {
-                        StartCoroutine(ShowHUD(msg));
-                        //tmpHud.text = msg;
-                    }                   
+                        tmpHud.text = msg;
+                    }
                 }
-                
+                else
+                {
+                    Debug.Log("Hitting nothing");
+                    tmpHud.text = "";
+                }
             }        
 			
 		}
@@ -93,14 +87,7 @@ public class RaycastForward : MonoBehaviour {
 
     
 
-    IEnumerator ShowHUD(string message)
-    {
-        tmpHud.text = message;
-        yield return new WaitForSecondsRealtime(.5f);
-        tmpHud.text = "";
-        
-
-    }
+    
 
     public void  MushroomTut()
     {

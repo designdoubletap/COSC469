@@ -58,13 +58,7 @@ public class ParticleDamage : MonoBehaviour {
             
         }
 
-        else if(other.tag == "Wooden Crate")
-        {
-            sparks.Stop(includeChildren);
-            damageAmount = 0;
-           
-            audio.Stop();
-        }
+       
 
     }
 
