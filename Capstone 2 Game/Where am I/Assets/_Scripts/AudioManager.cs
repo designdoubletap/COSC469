@@ -21,8 +21,11 @@ public class AudioManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
+        for (int i = 0; i < environtmentSounds.Length; i++)
+        {
+            environtmentSounds[i].GetComponent<AudioSource>().volume = .7f;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()

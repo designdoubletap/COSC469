@@ -24,7 +24,7 @@ public class WaterBehavior : MonoBehaviour {
 	{
 		if (other.tag == "Player" || other.tag == "MainCamera")
 		{
-			//Debug.Log ("Touching water");
+			Debug.Log ("Touching water");
 			other.GetComponentInChildren<FireBehvior> ().StopFire ();
             
             if(deepWater == true)

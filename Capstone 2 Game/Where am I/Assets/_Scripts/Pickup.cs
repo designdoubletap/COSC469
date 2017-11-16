@@ -126,17 +126,20 @@ public class Pickup : MonoBehaviour
                     rend.enabled = false;
                     this.gameObject.SetActive(false);
                     eaten = true;
-                    player.GetComponent<Rigidbody>().mass = 175;
+                    
 
 
 
                     if (sightMushroom == true)
                     {
+                        player.GetComponent<Rigidbody>().mass = 175;
+
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 0f;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 1;
                         audioManager.GetComponent<AudioManager>().LowerVolume();
 
+                        player.GetComponent<PlayerEffects>().typeOfMushroom = 1;
                         player.GetComponent<PlayerEffects>().Neutral();
                         player.GetComponent<PlayerEffects>().reset = false;
                         this.gameObject.SetActive(false);
@@ -149,6 +152,23 @@ public class Pickup : MonoBehaviour
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 3;
                         audioManager.GetComponent<AudioManager>().RaiseVolume();
                         //eatSound();
+
+                        player.GetComponent<PlayerEffects>().typeOfMushroom = 2;
+                        player.GetComponent<PlayerEffects>().Neutral();
+                        player.GetComponent<PlayerEffects>().reset = false;
+                        this.gameObject.SetActive(false);
+                    }
+
+                    if (strangeMushroom == true)
+                    {
+                        player.GetComponent<Rigidbody>().mass = 175;
+
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 0f;
+                        Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 1;
+                        audioManager.GetComponent<AudioManager>().RaiseVolume();
+
+                        player.GetComponent<PlayerEffects>().typeOfMushroom = 3;
                         player.GetComponent<PlayerEffects>().Neutral();
                         player.GetComponent<PlayerEffects>().reset = false;
                         this.gameObject.SetActive(false);
