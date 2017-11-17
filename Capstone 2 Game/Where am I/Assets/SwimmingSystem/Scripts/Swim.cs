@@ -76,7 +76,7 @@ namespace Assets.SwimmingSystem.Scripts
             // Set underwater rendering or default
             if (IsUnderwater())
             {
-                SetRenderDiving();
+                SetRenderDefault();
             }
             else
             {
@@ -91,6 +91,7 @@ namespace Assets.SwimmingSystem.Scripts
                 if (IsUnderwater())
                 {
                     DoDiving();
+                    SetRenderDiving();
                 }
                 else
                 {
@@ -152,7 +153,7 @@ namespace Assets.SwimmingSystem.Scripts
 
             Vector3 mv = MoveDir;
 
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.Space))
             {
                 // go upwards
                 if (_camera.gameObject.transform.position.y < _waterSurfacePosY + _aboveWaterTolerance)
@@ -161,7 +162,7 @@ namespace Assets.SwimmingSystem.Scripts
                 }
 
             }
-            else if (Input.GetKey(KeyCode.Q))
+            else if (Input.GetKey(KeyCode.LeftControl))
             {
                 // go down
                 mv.y = -_upDownSpeed;
@@ -197,6 +198,7 @@ namespace Assets.SwimmingSystem.Scripts
             {
                 // We enter the water... doesn't matter if we return from unserwater, we are still in the water
                 _isInWater = true;
+                SetRenderDiving();
 
                 Debug.Log("Water Trigger Enter : " + _isInWater);
             }

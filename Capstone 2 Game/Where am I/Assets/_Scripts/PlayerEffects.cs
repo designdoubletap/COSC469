@@ -93,4 +93,13 @@ public class PlayerEffects : MonoBehaviour {
         audioManager.GetComponent<AudioManager>().ResetVolume();
         weirdCanvas.gameObject.SetActive(false);
     }
+
+    private void ColliderEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Water")
+        {
+            Debug.Log("WATER");
+        }
+    }
 }
+
