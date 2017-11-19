@@ -127,8 +127,6 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-     <Compile Include="Assets\SwimmingSystem\Scripts\ReflectionUtil.cs" />
-     <Compile Include="Assets\SwimmingSystem\Scripts\Swim.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />
@@ -179,15 +177,12 @@
      <Compile Include="Assets\_Scripts\Overlay.cs" />
      <Compile Include="Assets\_Scripts\ParticleDamage.cs" />
      <Compile Include="Assets\_Scripts\Pickup.cs" />
-     <Compile Include="Assets\_Scripts\PickupNeutral.cs" />
-     <Compile Include="Assets\_Scripts\PickupObjects.cs" />
-     <Compile Include="Assets\_Scripts\PickupSight.cs" />
-     <Compile Include="Assets\_Scripts\PickupStrange.cs" />
      <Compile Include="Assets\_Scripts\PlayerEffects.cs" />
      <Compile Include="Assets\_Scripts\RaycastForward.cs" />
+     <Compile Include="Assets\_Scripts\ReflectionUtil.cs" />
      <Compile Include="Assets\_Scripts\ShowVideo.cs" />
      <Compile Include="Assets\_Scripts\SoundscapeAudioSource.cs" />
-     <Compile Include="Assets\_Scripts\Swimming.cs" />
+     <Compile Include="Assets\_Scripts\Swim.cs" />
      <Compile Include="Assets\_Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\_Scripts\TriggerDamage.cs" />
      <Compile Include="Assets\_Scripts\WaterBehavior.cs" />
@@ -303,7 +298,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />

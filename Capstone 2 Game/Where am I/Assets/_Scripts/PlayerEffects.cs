@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using Assets.SwimmingSystem.Scripts;
 
 public class PlayerEffects : MonoBehaviour {
 
@@ -10,13 +11,16 @@ public class PlayerEffects : MonoBehaviour {
     public Canvas sightCanvas;
     public Canvas soundCanvas;
     public Canvas weirdCanvas;
-    public int typeOfMushroom;    
+    public int typeOfMushroom;
+    public float pMass;
+    
 
 	// Use this for initialization
 	void Start () 
 	{
-		
-	}
+        pMass = gameObject.GetComponent<Rigidbody>().mass;
+
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -27,29 +31,39 @@ public class PlayerEffects : MonoBehaviour {
 	public void Neutral()
 	{
         if (reset == true)
+        {
             StopAllCoroutines();
+            Debug.Log("Stopping and resetting");
+        }
+        //sight mushroom
         if (typeOfMushroom == 1)
         {
             StartCoroutine(SightCooldown());
             sightCanvas.gameObject.SetActive(true);
             soundCanvas.gameObject.SetActive(false);
-            reset = true;
+            pMass = 175;
         }
-        if(typeOfMushroom == 2)
+        
+        //sound mushroom
+        else if(typeOfMushroom == 2)
         {
             StartCoroutine(SoundCooldown());
             soundCanvas.gameObject.SetActive(true);
             sightCanvas.gameObject.SetActive(false);
-            reset = true;
+            this.gameObject.GetComponent<Swim>().canSwim = true;
+            //this.gameObject.GetComponent<Swu>
         }
-        if(typeOfMushroom == 3)
+        
+        //weird mushroom
+        else if(typeOfMushroom == 3)
         {
             StartCoroutine(WeirdCooldown());
             weirdCanvas.gameObject.SetActive(true);
             sightCanvas.gameObject.SetActive(false);
             soundCanvas.gameObject.SetActive(false);
-            reset = true;
+            this.gameObject.GetComponent<Swim>().canSwim = true;
         }
+        
 
 	}
 
@@ -64,7 +78,7 @@ public class PlayerEffects : MonoBehaviour {
 		Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 2;
 		Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2f;
 		Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
-        //
+       pMass = 50;
 
         audioManager.GetComponent<AudioManager>().ResetVolume();
         sightCanvas.gameObject.SetActive(false);
@@ -79,6 +93,7 @@ public class PlayerEffects : MonoBehaviour {
         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 2f;
         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
         audioManager.GetComponent<AudioManager>().ResetVolume();
+        this.gameObject.GetComponent<Swim>().canSwim = false;
         soundCanvas.gameObject.SetActive(false);
     }
 
@@ -91,15 +106,10 @@ public class PlayerEffects : MonoBehaviour {
         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurIterations = 2;
         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurShader = Shader.Find("Hidden/ScreenSpaceAmbientObscurance");
         audioManager.GetComponent<AudioManager>().ResetVolume();
+        this.gameObject.GetComponent<Swim>().canSwim = false;
         weirdCanvas.gameObject.SetActive(false);
     }
 
-    private void ColliderEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Water")
-        {
-            Debug.Log("WATER");
-        }
-    }
+ 
 }
 

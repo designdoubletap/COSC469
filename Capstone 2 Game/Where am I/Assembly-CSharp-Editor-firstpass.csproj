@@ -164,7 +164,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />

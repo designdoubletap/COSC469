@@ -9,7 +9,7 @@ public class Pickup : MonoBehaviour
     //player information
     public Transform player;
     public Transform pCam;
-    public float playerMass;
+    //float playerMass;
     public float objMass;
 
     public float force = 10;
@@ -31,7 +31,7 @@ public class Pickup : MonoBehaviour
     public bool neutralMushroom;
 
     //renderer for mushrooms
-    public Renderer rend;
+    //public Renderer rend;
 
     bool inRange = false;
     public bool pickedUp = false;
@@ -42,10 +42,10 @@ public class Pickup : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        playerMass = player.GetComponent<Rigidbody>().mass;
+        //playerMass = player.gameObject.GetComponent<Rigidbody>().mass;
 
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
+       // rend = GetComponent<Renderer>();
+       // rend.enabled = true;
 
         GetComponent<Rigidbody>().useGravity = true;
         //get audio source
@@ -61,6 +61,7 @@ public class Pickup : MonoBehaviour
     {
         
         objMass = this.GetComponent<Rigidbody>().mass;
+        //playerMass = player.GetComponent<PlayerEffects>().pMass;
 
 
         float playerRange = Vector3.Distance(gameObject.transform.position, player.position);
@@ -72,7 +73,7 @@ public class Pickup : MonoBehaviour
         else { inRange = false; }
 
         //player in range and is pressing interact button
-        if (inRange == true && Input.GetButtonDown("Interact") && playerMass >= objMass)
+        if (inRange == true && Input.GetButtonDown("Interact") && player.GetComponent<PlayerEffects>().pMass >= objMass)
         {
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = pCam;
@@ -123,16 +124,17 @@ public class Pickup : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F))
                 {
 
-                    rend.enabled = false;
+                   // rend.enabled = false;
                     this.gameObject.SetActive(false);
                     eaten = true;
-                    
+                    //resets all mushroom effects so their full cooldown can be reached
+                    player.GetComponent<PlayerEffects>().reset = true;
 
 
 
                     if (sightMushroom == true)
                     {
-                        player.GetComponent<Rigidbody>().mass = 175;
+                        player.gameObject.GetComponent<Rigidbody>().mass = 175;
 
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().downsample = 1;
                         Camera.main.GetComponent<UnityStandardAssets.ImageEffects.BlurOptimized>().blurSize = 0f;
@@ -141,7 +143,6 @@ public class Pickup : MonoBehaviour
 
                         player.GetComponent<PlayerEffects>().typeOfMushroom = 1;
                         player.GetComponent<PlayerEffects>().Neutral();
-                        player.GetComponent<PlayerEffects>().reset = false;
                         this.gameObject.SetActive(false);
                     }
 
@@ -155,7 +156,6 @@ public class Pickup : MonoBehaviour
 
                         player.GetComponent<PlayerEffects>().typeOfMushroom = 2;
                         player.GetComponent<PlayerEffects>().Neutral();
-                        player.GetComponent<PlayerEffects>().reset = false;
                         this.gameObject.SetActive(false);
                     }
 
@@ -170,7 +170,6 @@ public class Pickup : MonoBehaviour
 
                         player.GetComponent<PlayerEffects>().typeOfMushroom = 3;
                         player.GetComponent<PlayerEffects>().Neutral();
-                        player.GetComponent<PlayerEffects>().reset = false;
                         this.gameObject.SetActive(false);
                     }
 

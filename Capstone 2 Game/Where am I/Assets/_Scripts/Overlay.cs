@@ -9,10 +9,11 @@ public class Overlay : MonoBehaviour {
 
     public Transform overlayCanvas;
     public Transform optionsCanvas;
-    public bool showMore;
+    public bool showLess;
     public Transform tipsCanvas;
     public Transform tip;
     public Transform tip2;
+    public Transform tip3;
     public Transform tipBack;
     public Transform helpShowMore;
     public Transform hudCanvas;
@@ -29,11 +30,12 @@ public class Overlay : MonoBehaviour {
         tipsCanvas.gameObject.SetActive(false);
         deathCanvas.gameObject.SetActive(false);
 
-        if(showMore == true)
+        if(showLess == true)
         {
             tip.gameObject.SetActive(true);
             //tipBack.gameObject.SetActive(true);
             tip2.gameObject.SetActive(false);
+            tip3.gameObject.SetActive(false);
             helpShowMore.gameObject.SetActive(false);
         }
     }
@@ -105,12 +107,21 @@ public class Overlay : MonoBehaviour {
         {
             tip2.gameObject.SetActive(true);
             tip.gameObject.SetActive(false);
+            //tip3.gameObject.SetActive(false);
         }
         else if (tip2.gameObject.activeInHierarchy == true)
         {
             tip2.gameObject.SetActive(false);
+            tip3.gameObject.SetActive(true);
+            tip.gameObject.SetActive(false);
+        }
+        else if(tip3.gameObject.activeInHierarchy == true)
+        {
+            tip3.gameObject.SetActive(false);
+            tip2.gameObject.SetActive(false);
             tip.gameObject.SetActive(true);
         }
+
     }
 
     public void Options()

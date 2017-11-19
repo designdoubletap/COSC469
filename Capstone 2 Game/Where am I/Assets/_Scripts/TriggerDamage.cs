@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerDamage : MonoBehaviour {
 
     public bool isDamaging = true;
+    public bool isWater;
     public float damageAmount;
 
     void OnTriggerStay(Collider other)
@@ -19,6 +20,14 @@ public class TriggerDamage : MonoBehaviour {
             other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
 
             
+        }
+        //only damages the player when the actual camera is submereged 
+        else if (isWater == true && other.tag=="Main Camera")
+        {
+            damageAmount = GetComponentInChildren<ParticleDamage>().damageAmount;
+
+
+            other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
         }
     }
 

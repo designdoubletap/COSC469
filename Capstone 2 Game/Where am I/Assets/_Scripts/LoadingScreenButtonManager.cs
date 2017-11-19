@@ -11,6 +11,7 @@ public class LoadingScreenButtonManager : MonoBehaviour {
     public bool showMore;
     public Transform tipPanel;
     public Transform tip2Panel;
+    public Transform tip3Panel;
     public Button proceed;
 
 	// Use this for initialization
@@ -33,6 +34,7 @@ public class LoadingScreenButtonManager : MonoBehaviour {
              
             tipPanel.gameObject.SetActive(true);
             tip2Panel.gameObject.SetActive(false);
+            tip3Panel.gameObject.SetActive(false);
             StartCoroutine(TransitionWait());
         }
         
@@ -45,23 +47,26 @@ public class LoadingScreenButtonManager : MonoBehaviour {
     {
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
+        //Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(7f);
         loadingGO.SetActive(false);
         proceedGO.SetActive(true);
     }
 
     IEnumerator TransitionWait()
     {
-        yield return new WaitForSeconds(6f);
-
+        yield return new WaitForSeconds(3f);
         tipPanel.gameObject.SetActive(false);
         tip2Panel.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+        tip2Panel.gameObject.SetActive(false);
+        tip3Panel.gameObject.SetActive(true);
     }
 	
 	

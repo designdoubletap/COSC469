@@ -9,24 +9,11 @@ public class RaycastForward : MonoBehaviour {
 
     //public Text hudText;
     public TextMeshProUGUI tmpHud;
-    public TextMeshProUGUI voiceHud;
-
-    public GameObject smoke;
-
-
+    
     public Transform player;
     public float playerMass;
     float objMass;
 
-    public float fire;
-    
-    
-
-    bool firstHit = true;
-    string voiceDialog1 = "Hello!\nI am your friendly neighborhood voice in your head.\nNo, no, you're not going crazy. You are perfectly sane and healthy.\nExcept for the gas. Don't you smell that? ";
-    string dialog;
-    string dHolder;
-    float waitTime;
 
 	// Use this for initialization
 	void Start () 
@@ -87,22 +74,6 @@ public class RaycastForward : MonoBehaviour {
 
 	}
 
-
-    IEnumerator TutorialHUD()
-    {
-        yield return new WaitForSecondsRealtime(5);
-        voiceHud.SetText("Pick it up. Press E");
-    }
-
- 
-
-    IEnumerator DialogQ()
-    {
-        yield return new WaitForSecondsRealtime(3);
-        voiceHud.SetText("Something is not right here...");
-        Pause(3);
-       
-    }
 
     IEnumerator Pause(float sec)
     {

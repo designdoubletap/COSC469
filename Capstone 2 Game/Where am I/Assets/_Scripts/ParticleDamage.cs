@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ParticleDamage : MonoBehaviour {
 
-    bool promptKey = false;
-
     public bool isDamaging = true;
     public float damageAmount = 10;
     public bool interactable;
@@ -15,19 +13,18 @@ public class ParticleDamage : MonoBehaviour {
     
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 
 
         
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            promptKey = true;
-        }
+        
     }
 
 
