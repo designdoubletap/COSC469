@@ -51,7 +51,7 @@ namespace Assets.SwimmingSystem.Scripts
           
             _fogColorWater = new Color(0.2f, 0.65f, 0.75f, 0.5f);
 
-            Transform fpChar = transform.FindChild("FirstPersonCharacter");
+            Transform fpChar = transform.FindChild("Player Cam"); //changed from FirstPersonCharacter
 
             _blur = fpChar.GetComponent<Blur>();
 
