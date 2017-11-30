@@ -230,7 +230,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone 2 Game/Where am I/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/deswyn/Desktop/Where am I/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -290,10 +290,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b12">
- <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone 2 Game/Where am I/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
+ <HintPath>C:/Users/deswyn/Desktop/Where am I/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b12.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b12-Editor">
- <HintPath>C:/Users/deswyn/Documents/Captsone/COSC469/Capstone 2 Game/Where am I/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b12-Editor.dll</HintPath>
+ <HintPath>C:/Users/deswyn/Desktop/Where am I/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b12-Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
