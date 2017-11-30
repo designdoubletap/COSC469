@@ -68,6 +68,7 @@ public class LoadingScreenButtonManager : MonoBehaviour {
         tip2Panel.gameObject.SetActive(false);
         tip3Panel.gameObject.SetActive(true);
     }
+
 	
 	
 }

@@ -168,6 +168,9 @@
      <Compile Include="Assets\_Scripts\Explosion.cs" />
      <Compile Include="Assets\_Scripts\Fading.cs" />
      <Compile Include="Assets\_Scripts\FireBehvior.cs" />
+     <Compile Include="Assets\_Scripts\FlameThrowerShake.cs" />
+     <Compile Include="Assets\_Scripts\FlamethrowerBehavior.cs" />
+     <Compile Include="Assets\_Scripts\FlamethrowerToggle.cs" />
      <Compile Include="Assets\_Scripts\GameSettings.cs" />
      <Compile Include="Assets\_Scripts\GasBarrelBehavior.cs" />
      <Compile Include="Assets\_Scripts\HealthBar.cs" />
@@ -182,6 +185,7 @@
      <Compile Include="Assets\_Scripts\ReflectionUtil.cs" />
      <Compile Include="Assets\_Scripts\ShowVideo.cs" />
      <Compile Include="Assets\_Scripts\SoundscapeAudioSource.cs" />
+     <Compile Include="Assets\_Scripts\SpawnObjects.cs" />
      <Compile Include="Assets\_Scripts\Swim.cs" />
      <Compile Include="Assets\_Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\_Scripts\TriggerDamage.cs" />

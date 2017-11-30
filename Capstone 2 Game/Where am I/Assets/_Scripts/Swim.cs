@@ -50,7 +50,7 @@ using System.Reflection;
 
             _characterController = GetComponent<CharacterController>();
           
-            _fogColorWater = new Color(0.2f, 0.65f, 0.75f, 0.5f);
+            _fogColorWater = new Color(.69f, .57f, .3f, .5f);
 
             Transform fpChar = transform.FindChild("Player Cam"); //changed from FirstPersonCharacter
 
