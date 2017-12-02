@@ -11,8 +11,10 @@ public class PlayerEffects : MonoBehaviour {
     public Canvas sightCanvas;
     public Canvas soundCanvas;
     public Canvas weirdCanvas;
+    public Canvas toolCanvas;
     public int typeOfMushroom;
     public float pMass;
+    public bool hasTool;
     
 
 	// Use this for initialization

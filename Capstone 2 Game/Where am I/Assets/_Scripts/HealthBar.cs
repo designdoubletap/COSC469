@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour {
 
     public Image curHealthBar;
     public GameObject overlayMngr;
+    GameObject pCam;
 
     public float damagePoint = 100;
     private float maxDamagePoint = 100;
@@ -15,6 +16,7 @@ public class HealthBar : MonoBehaviour {
     private void Start()
     {
         UpdateHealthBar();
+        pCam = this.transform.FindChild("Player Cam").gameObject;
     }
 
     private void UpdateHealthBar()
@@ -23,7 +25,7 @@ public class HealthBar : MonoBehaviour {
 
         curHealthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
 
-        Debug.Log((Mathf.Round(damagePoint * 100f / 100f)));
+       //Debug.Log((Mathf.Round(damagePoint * 100f / 100f)));
         
     }
 
@@ -33,9 +35,10 @@ public class HealthBar : MonoBehaviour {
         if(damagePoint < 0)
         {
             damagePoint = 0;
-            //SceneManager.LoadScene(0);
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+            Time.timeScale = 0;
+            pCam.GetComponent<CameraShake>().shake = false;
             overlayMngr.GetComponent<Overlay>().Death();
             
         }

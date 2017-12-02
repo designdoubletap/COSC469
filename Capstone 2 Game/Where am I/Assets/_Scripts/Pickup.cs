@@ -30,6 +30,9 @@ public class Pickup : MonoBehaviour
     public bool strangeMushroom;
     public bool neutralMushroom;
 
+    //tools
+    public bool isTool;
+
     //renderer for mushrooms
     //public Renderer rend;
 
@@ -116,6 +119,13 @@ public class Pickup : MonoBehaviour
                 transform.parent = null;
                 pickedUp = false;
                 dropSound();
+            }
+
+            else if(isTool == true)
+            {
+                player.GetComponent<PlayerEffects>().hasTool = true;
+                Debug.Log("Has tool");
+                this.gameObject.SetActive(false);
             }
 
             //mushroom logic

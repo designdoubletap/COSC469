@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class TorchBehavior : MonoBehaviour {
 
-    
-    float camW;
-    float camH;
 
     GameObject torch;
+    GameObject fire;
+   
     
     
     // Use this for initialization
     void Start ()
     {
         torch = this.gameObject;
-       
+        fire = torch.transform.FindChild("Fire").gameObject;
+        
+
 	}
 	
 	// Update is called once per frame
@@ -45,7 +46,8 @@ public class TorchBehavior : MonoBehaviour {
     {
         if(other.tag == "Water")
         {
-            flames.Stop();
+            //flames.Stop();
+            fire.GetComponent<FireBehvior>().StopFire();
             Debug.Log("Touching water");
             
         }

@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class WaterBehavior : MonoBehaviour {
 
-    //pubbli
-
-    public bool deepWater;
 	// Use this for initialization
 	void Start ()
     {
@@ -27,10 +24,7 @@ public class WaterBehavior : MonoBehaviour {
 			//Debug.Log ("Touching water");
 			//other.GetComponentInChildren<FireBehvior> ().StopFire ();
             
-            if(deepWater == true)
-            {
-                
-            }
+          
 		}
 
         

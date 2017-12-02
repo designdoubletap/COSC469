@@ -45,7 +45,7 @@ public class ParticleDamage : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
         AudioSource audio = GetComponent<AudioSource>();
-        if (interactable == true && other.tag == "Player" && (Input.GetKeyDown(KeyCode.E)))
+        if (interactable == true && other.tag == "Player" && (Input.GetKeyDown(KeyCode.E)) && other.GetComponent<PlayerEffects>().hasTool == true)
         {
 
             sparks.Stop(includeChildren);
