@@ -13,7 +13,7 @@ public class ParticleDamage : MonoBehaviour {
     GameObject player;
 
     GameObject vent;
-
+    public int ventNum;
 
     
 
@@ -38,6 +38,8 @@ public class ParticleDamage : MonoBehaviour {
 
        else if (player.GetComponent<Swim>().canSwim == false)
            damageAmount = prevDamage;
+
+        
     }
 
 
@@ -66,14 +68,37 @@ public class ParticleDamage : MonoBehaviour {
             isDamaging = false;
             damageAmount = 0;
             audio.Stop();
-            other.GetComponent<PlayerEffects>().numVentClosed++;
+            //other.GetComponent<PlayerEffects>().numVentClosed = other.GetComponent<PlayerEffects>().numVentClosed + ventNum;
 
+            if (ventNum == 1)
+            {
+                other.GetComponent<PlayerEffects>().spawnV = true;
+            }
+            else if(ventNum == 2)
+            {
+                other.GetComponent<PlayerEffects>().waterfallV = true;
+            }
+            else if (ventNum == 3)
+            {
+                other.GetComponent<PlayerEffects>().fireV = true;
+            }
+            else if (ventNum == 4)
+            {
+                other.GetComponent<PlayerEffects>().toolV = true;
+            }
 
         }
-
-       
-
     }
+
+    /*
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player" && isVent == true && sparks.isStopped)
+        {
+            other.GetComponent<PlayerEffects>().numVentClosed = other.GetComponent<PlayerEffects>().numVentClosed + ventNum;
+        }
+    }
+    */
 
    
 }

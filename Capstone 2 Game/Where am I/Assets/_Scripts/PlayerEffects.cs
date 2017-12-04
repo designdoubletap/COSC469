@@ -17,9 +17,15 @@ public class PlayerEffects : MonoBehaviour {
     public float pMass;
     public bool hasTool;
 
-    public int numVentClosed;
+    //public int numVentClosed;
     public Canvas endscreen;
     public Canvas pauseMenu;
+
+    public int numVentClosed;
+    public bool spawnV;
+    public bool waterfallV;
+    public bool fireV;
+    public bool toolV;
 
 	// Use this for initialization
 	void Start () 
@@ -32,10 +38,10 @@ public class PlayerEffects : MonoBehaviour {
 	void Update () 
 	{
         //win screen
-        if(numVentClosed == 4)
+        if(spawnV == true && waterfallV == true && fireV == true && toolV == true)
         {
             endscreen.gameObject.SetActive(true);
-            pauseMenu.gameObject.SetActive(false);
+            
             Time.timeScale = 0;
             audioManager.GetComponent<AudioManager>().PauseAll();
             Cursor.lockState = CursorLockMode.Confined;

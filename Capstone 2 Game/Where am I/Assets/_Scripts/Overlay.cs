@@ -18,6 +18,7 @@ public class Overlay : MonoBehaviour {
     public Transform helpShowMore;
     public Transform hudCanvas;
     public Transform deathCanvas;
+    public Transform winCanvas;
     public GameObject audioManager;
 
     public Transform player;
@@ -54,7 +55,7 @@ public class Overlay : MonoBehaviour {
 
     public void Pause()
     {
-        if (overlayCanvas.gameObject.activeInHierarchy == false && deathCanvas.gameObject.activeInHierarchy == false)
+        if (overlayCanvas.gameObject.activeInHierarchy == false && deathCanvas.gameObject.activeInHierarchy == false && winCanvas.gameObject.activeInHierarchy == false)
         {
             overlayCanvas.gameObject.SetActive(true);
             optionsCanvas.gameObject.SetActive(false);
