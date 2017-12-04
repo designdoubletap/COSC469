@@ -165,6 +165,7 @@
      <Compile Include="Assets\_Scripts\CameraShake.cs" />
      <Compile Include="Assets\_Scripts\DestroyMushroom.cs" />
      <Compile Include="Assets\_Scripts\Detect.cs" />
+     <Compile Include="Assets\_Scripts\EndScreen.cs" />
      <Compile Include="Assets\_Scripts\Explosion.cs" />
      <Compile Include="Assets\_Scripts\Fading.cs" />
      <Compile Include="Assets\_Scripts\FireBehvior.cs" />
@@ -186,7 +187,6 @@
      <Compile Include="Assets\_Scripts\ReflectionUtil.cs" />
      <Compile Include="Assets\_Scripts\ShowVideo.cs" />
      <Compile Include="Assets\_Scripts\SoundscapeAudioSource.cs" />
-     <Compile Include="Assets\_Scripts\SpawnObjects.cs" />
      <Compile Include="Assets\_Scripts\Swim.cs" />
      <Compile Include="Assets\_Scripts\TorchBehavior.cs" />
      <Compile Include="Assets\_Scripts\TriggerDamage.cs" />

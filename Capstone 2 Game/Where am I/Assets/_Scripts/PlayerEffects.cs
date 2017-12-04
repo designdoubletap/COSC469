@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 //using Assets.SwimmingSystem.Scripts;
 
 public class PlayerEffects : MonoBehaviour {
@@ -11,11 +12,14 @@ public class PlayerEffects : MonoBehaviour {
     public Canvas sightCanvas;
     public Canvas soundCanvas;
     public Canvas weirdCanvas;
-    public Canvas toolCanvas;
+    //public Canvas toolCanvas;
     public int typeOfMushroom;
     public float pMass;
     public bool hasTool;
-    
+
+    public int numVentClosed;
+    public Canvas endscreen;
+    public Canvas pauseMenu;
 
 	// Use this for initialization
 	void Start () 
@@ -27,7 +31,20 @@ public class PlayerEffects : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+        //win screen
+        if(numVentClosed == 4)
+        {
+            endscreen.gameObject.SetActive(true);
+            pauseMenu.gameObject.SetActive(false);
+            Time.timeScale = 0;
+            audioManager.GetComponent<AudioManager>().PauseAll();
+            Cursor.lockState = CursorLockMode.Confined;
+           GetComponent<FirstPersonController>().enabled = false;
+            GetComponent<HealthBar>().isDone = true;
+            Cursor.visible = true;
+            Debug.Log("Game over");
+        }
+       // Debug.Log("Vents Closed: " + numVentClosed);
 	}
 
 	public void Neutral()
@@ -43,6 +60,7 @@ public class PlayerEffects : MonoBehaviour {
             StartCoroutine(SightCooldown());
             sightCanvas.gameObject.SetActive(true);
             soundCanvas.gameObject.SetActive(false);
+            this.gameObject.GetComponent<Swim>().canSwim = false;
             pMass = 175;
         }
         

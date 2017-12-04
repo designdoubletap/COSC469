@@ -26,6 +26,7 @@ public class TorchBehavior : MonoBehaviour {
         if(torch.GetComponent<Pickup>().pickedUp == false)
         {
             torch.transform.rotation = Quaternion.Euler(0, 0, 0);
+            torch.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
         }
 	}
 
@@ -51,6 +52,6 @@ public class TorchBehavior : MonoBehaviour {
             Debug.Log("Touching water");
             
         }
-        Debug.Log("Torch touching something");
+        //Debug.Log("Torch touching something");
     }
 }

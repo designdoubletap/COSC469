@@ -24,6 +24,7 @@ public class Pickup : MonoBehaviour
 
     //toggles for mushrooms and objects
     public bool objectPickup;
+    public bool isBox;
     public bool mushroom;
     public bool sightMushroom;
     public bool soundMushroom;
@@ -32,6 +33,7 @@ public class Pickup : MonoBehaviour
 
     //tools
     public bool isTool;
+    public GameObject toolImg;
 
     //renderer for mushrooms
     //public Renderer rend;
@@ -45,10 +47,8 @@ public class Pickup : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //playerMass = player.gameObject.GetComponent<Rigidbody>().mass;
-
-       // rend = GetComponent<Renderer>();
-       // rend.enabled = true;
+        if(isTool == true)
+            toolImg.SetActive(false);
 
         GetComponent<Rigidbody>().useGravity = true;
         //get audio source
@@ -86,9 +86,12 @@ public class Pickup : MonoBehaviour
         //pickup 
         if (pickedUp == true)
         {
+            if(isBox == true)
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            }
 
             GetComponent<Rigidbody>().useGravity = true;
-            //GetComponent<Rigidbody>().freezeRotation = true;
 
             //drop object if player touches wall
             if (wallTouch == true)
@@ -126,6 +129,7 @@ public class Pickup : MonoBehaviour
                 player.GetComponent<PlayerEffects>().hasTool = true;
                 Debug.Log("Has tool");
                 this.gameObject.SetActive(false);
+                toolImg.SetActive(true);
             }
 
             //mushroom logic

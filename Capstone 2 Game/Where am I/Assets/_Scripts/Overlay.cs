@@ -156,6 +156,11 @@ public class Overlay : MonoBehaviour {
         player.GetComponent<FirstPersonController>().enabled = false;
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void Quit()
     {
         Application.Quit();

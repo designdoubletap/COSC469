@@ -53,7 +53,7 @@ public class LoadingScreenButtonManager : MonoBehaviour {
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(3f);
         loadingGO.SetActive(false);
         proceedGO.SetActive(true);
     }

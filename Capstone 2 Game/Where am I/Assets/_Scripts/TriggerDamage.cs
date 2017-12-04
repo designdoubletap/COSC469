@@ -24,8 +24,15 @@ public class TriggerDamage : MonoBehaviour {
         //only damages the player when the actual camera is submereged 
         else if (isWater == true && other.tag=="Main Camera")
         {
-            damageAmount = GetComponentInChildren<ParticleDamage>().damageAmount;
 
+            if(other.GetComponentInParent<Swim>().canSwim == true)
+            {
+                isDamaging = false;
+                GetComponentInChildren<ParticleDamage>().isDamaging = false;
+            }
+            else if(other.GetComponentInParent<Swim>().canSwim == false)
+                damageAmount = GetComponentInChildren<ParticleDamage>().damageAmount;
+            
 
             other.SendMessage((isDamaging) ? "TakeDamage" : "TakeDamage", Time.deltaTime * damageAmount);
         }

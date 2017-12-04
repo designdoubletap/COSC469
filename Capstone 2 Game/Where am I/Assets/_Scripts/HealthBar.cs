@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour {
 
     public Image curHealthBar;
     public GameObject overlayMngr;
+    public bool isDone;
     GameObject pCam;
 
     public float damagePoint = 100;
@@ -32,7 +33,7 @@ public class HealthBar : MonoBehaviour {
     public void TakeDamage(float damage)
     {
         damagePoint -= damage;
-        if(damagePoint < 0)
+        if(damagePoint < 0 && isDone == false)
         {
             damagePoint = 0;
             Cursor.lockState = CursorLockMode.Confined;

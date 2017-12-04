@@ -36,6 +36,7 @@ public class FireBehvior : MonoBehaviour {
 		flames.Play ();
 	}
 
+    //lights a torch on fire
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player" || other.tag == "MainCamera")

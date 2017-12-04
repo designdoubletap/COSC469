@@ -13,17 +13,7 @@ public class RaycastForward : MonoBehaviour {
     public Transform player;
     public float playerMass;
     float objMass;
-
-
-	// Use this for initialization
-	void Start () 
-	{
-
-       //StartCoroutine(DialogQ());
-        
-	}
 	
-	// Update is called once per frame
 	void FixedUpdate () 
 	{
         //get player current mass
@@ -59,6 +49,13 @@ public class RaycastForward : MonoBehaviour {
                     {
                         tmpHud.text = msg;
                     }
+
+                    if (msg.Equals("Broken Vent") && player.GetComponent<PlayerEffects>().hasTool == true)
+                    {
+                        tmpHud.text = msg + "\nPress E to Fix";
+                    }
+                    else if (msg.Equals("Broken Vent"))
+                        tmpHud.text = msg;
 
                     
                 }

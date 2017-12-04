@@ -26,9 +26,15 @@ public class FirstBrokenVent : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            msg.SetActive(false);
+            StartCoroutine(WaitToClear());
         }
         activate = false;
+    }
+
+    IEnumerator WaitToClear()
+    {
+        yield return new WaitForSeconds(3f);
+        msg.SetActive(false);
     }
 
 
