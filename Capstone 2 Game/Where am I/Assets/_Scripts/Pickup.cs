@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
@@ -38,12 +39,18 @@ public class Pickup : MonoBehaviour
     //renderer for mushrooms
     //public Renderer rend;
 
-    bool inRange = false;
-    public bool pickedUp = false;
+    public bool inRange = false; //this can be used to show when the player is in range
+    public bool pickedUp = false; //this can be used to show the player that they can drop items
     public bool eaten = false;
     bool wallTouch = false;
 
-   
+    //hud icons
+    Image handUI;
+    Image dropUI;
+    Image pickupUI;
+    
+
+
     // Use this for initialization
     void Start()
     {
@@ -55,6 +62,17 @@ public class Pickup : MonoBehaviour
         soundSource = GetComponent<AudioSource>();
         //eat audio 
         eatSoundSource = GetComponent<AudioSource>();
+
+        //hud icons
+        handUI = pCam.GetComponent<RaycastForward>().hand;
+        dropUI = pCam.GetComponent<RaycastForward>().drop;
+        pickupUI = pCam.GetComponent<RaycastForward>().pickup;
+
+        handUI.gameObject.SetActive(false);
+        dropUI.gameObject.SetActive(false);
+        pickupUI.gameObject.SetActive(false);
+
+        
         
 
     }
@@ -72,8 +90,13 @@ public class Pickup : MonoBehaviour
         if (playerRange <= 1f)
         {
             inRange = true;
+            handUI.gameObject.SetActive(true);
+            pickupUI.gameObject.SetActive(true);
+
+
         }
-        else { inRange = false; }
+        else
+            inRange = false;
 
         //player in range and is pressing interact button
         if (inRange == true && Input.GetButtonDown("Interact") && player.GetComponent<PlayerEffects>().pMass >= objMass)
@@ -86,7 +109,10 @@ public class Pickup : MonoBehaviour
         //pickup 
         if (pickedUp == true)
         {
-            if(isBox == true)
+            handUI.gameObject.SetActive(true);
+            dropUI.gameObject.SetActive(true);
+            pickupUI.gameObject.SetActive(false);
+            if (isBox == true)
             {
                 this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             }
@@ -122,6 +148,9 @@ public class Pickup : MonoBehaviour
                 transform.parent = null;
                 pickedUp = false;
                 dropSound();
+                handUI.gameObject.SetActive(false);
+                dropUI.gameObject.SetActive(false);
+                pickupUI.gameObject.SetActive(false);
             }
 
             else if(isTool == true)
@@ -141,6 +170,9 @@ public class Pickup : MonoBehaviour
                    // rend.enabled = false;
                     this.gameObject.SetActive(false);
                     eaten = true;
+                    handUI.gameObject.SetActive(false);
+                    pickupUI.gameObject.SetActive(false);
+                    dropUI.gameObject.SetActive(false);
                     //resets all mushroom effects so their full cooldown can be reached
                     player.GetComponent<PlayerEffects>().reset = true;
 
@@ -202,6 +234,8 @@ public class Pickup : MonoBehaviour
             }
         }
 
+        
+        
         
     }
 

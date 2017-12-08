@@ -9,6 +9,9 @@ public class RaycastForward : MonoBehaviour {
 
     //public Text hudText;
     public TextMeshProUGUI tmpHud;
+    public Image hand;
+    public Image drop;
+    public Image pickup;
     
     public Transform player;
     public float playerMass;
@@ -44,6 +47,8 @@ public class RaycastForward : MonoBehaviour {
                     {
                         msg = msg + "\nHeavy!";
                         tmpHud.text = msg;
+                        hand.gameObject.SetActive(false);
+                        pickup.gameObject.SetActive(false);
                     }
                     if(playerMass >= objMass)
                     {
@@ -63,6 +68,8 @@ public class RaycastForward : MonoBehaviour {
                 {
                     //Debug.Log("Hitting nothing");
                     tmpHud.text = "";
+                    hand.gameObject.SetActive(false);
+                    pickup.gameObject.SetActive(false);
                 }
             }        
 			

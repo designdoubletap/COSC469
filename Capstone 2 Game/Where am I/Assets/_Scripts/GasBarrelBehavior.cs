@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GasBarrelBehavior : MonoBehaviour {
 
@@ -8,7 +9,10 @@ public class GasBarrelBehavior : MonoBehaviour {
     public Transform pCam;
 
     public GameObject leak;
-    
+
+    Image handUI;
+    Image dropUI;
+    Image pickupUI;
 
     float force = 2f;
 
@@ -23,7 +27,15 @@ public class GasBarrelBehavior : MonoBehaviour {
 	void Start ()
     {
         this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-	}
+
+        handUI = pCam.GetComponent<RaycastForward>().hand;
+        dropUI = pCam.GetComponent<RaycastForward>().drop;
+        pickupUI = pCam.GetComponent<RaycastForward>().pickup;
+
+        handUI.gameObject.SetActive(false);
+        dropUI.gameObject.SetActive(false);
+        pickupUI.gameObject.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -36,6 +48,8 @@ public class GasBarrelBehavior : MonoBehaviour {
         if (playerRange <= 1f)
         {
             inRange = true;
+            handUI.gameObject.SetActive(true);
+            pickupUI.gameObject.SetActive(true);
         }
         else { inRange = false; }
 
@@ -51,6 +65,10 @@ public class GasBarrelBehavior : MonoBehaviour {
 
         if (pickedUp == true)
         {
+            handUI.gameObject.SetActive(true);
+            dropUI.gameObject.SetActive(true);
+            pickupUI.gameObject.SetActive(false);
+
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
 
@@ -82,6 +100,10 @@ public class GasBarrelBehavior : MonoBehaviour {
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 pickedUp = false;
+
+                handUI.gameObject.SetActive(false);
+                dropUI.gameObject.SetActive(false);
+                pickupUI.gameObject.SetActive(false);
 
             }
         }
